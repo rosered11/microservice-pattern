@@ -33,7 +33,8 @@ namespace circuit_breaker_pattern
             Console.ResetColor();
 
             // Reset Circuit if it don't setting, it will show status HalfOpen
-            policy.Reset();
+            // If reset it, it will reset failed count.
+            //policy.Reset();
         }
 
         static void OnRest(Context context)
